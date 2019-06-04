@@ -1,0 +1,11 @@
+<app-header></app-header>
+<main class="user-page">
+    <button (click)="onTapButton()" id="button-tap">
+      <img src="{{ isTaped ? '../../../assets/img/tapOn.png' : '../../../assets/img/tapOff.png' }}" class="img-btn-push" />
+    </button>
+    <span class="numberTap">{{ numberTap }}</span>
+
+    <div class="wrapperJauge">
+      <span class="jaugeTimer" [class.isStarted]="isStarted"></span>
+    </div>
+</main>

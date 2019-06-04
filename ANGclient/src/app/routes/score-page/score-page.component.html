@@ -1,0 +1,22 @@
+<app-header></app-header>
+<main>
+  <div class="score-page">
+    <p *ngIf="listScore && listScore.length === 0; else elseBlock">Aucun score enregistré</p>
+    <div>{{ value }}</div>
+
+    <ng-template #elseBlock>
+      <ul>
+        <li *ngFor="let score of listScore">
+          <span class="points">
+            {{ score.point }}
+          </span>
+          <div class="block-right">
+            <span>{{ score.username }}</span>
+            <span class="separator">/</span>
+            <span>{{ score.date }}</span>
+          </div>
+        </li>
+      </ul>
+    </ng-template>
+  </div>
+</main>

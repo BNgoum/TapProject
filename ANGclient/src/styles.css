@@ -1,0 +1,188 @@
+@font-face {
+  font-family: "Coolvetica";
+  src: url("./assets/fonts/coolvetica.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "CutTheCrap";
+    src: url("./assets/fonts/CutTheCrap.ttf") format("truetype");
+  }
+
+/*
+Reset
+*/
+    :root{
+        --max-width: 48rem;
+        --max-marge: 6rem;
+        --med-marge: 3rem;
+        --min-marge: 1.5rem;
+        --dark-color: black;
+        --med-color: grey;
+        --light-color: white;
+        --error-color: red;
+        --success-color: green;
+    }
+
+    *{
+        margin: 0;
+        padding: 0;
+
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+
+        font-family: 'Coolvetica', 'Arial', sans-serif;
+    }
+
+    app-home-page, app-form-response{
+        display: block;
+    }
+
+    html{
+        font-size: 16px;
+        font-family: sans-serif;
+        font-weight: normal;
+        line-height: 1.5;
+        padding: 1rem;
+    }
+
+    body{
+        margin: auto;
+        max-width: 48rem;
+    }
+
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+
+    form{
+        margin-bottom: var(--max-marge);
+    }
+
+    input:not([type="checkbox"]), input:not([type="radio"]), label, [type="submit"]{
+        display: block;
+        width: 100%;
+        background: transparent;
+    }
+
+    label{
+        font-size: 1.1rem;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    input{
+        font-size: 1rem;
+        padding: 1rem;
+        border: none;
+        border-bottom: .1rem solid var(--med-color);
+        margin-bottom: var(--med-marge);
+    }
+
+    button{
+        border: none;
+        background: transparent;
+    }
+
+    [type="submit"]{
+        text-transform: uppercase;
+        font-weight: 900;
+        padding: 1rem;
+        border: .1rem solid var(--med-color);
+        font-size: .875rem;
+        border-radius: 25px;
+        max-width: 15rem;
+        margin: auto;
+
+        transition: all .3s;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -ms-transition: all .3s;
+        -o-transition: all .3s;
+    }
+
+    [type="submit"][disabled]{
+        opacity: .5;
+    }
+
+    [type="submit"]:not([disabled]):hover{
+        color: var(--light-color);
+        background-color: var(--dark-color);
+        border-color: var(--dark-color);
+    }
+/**/
+
+/*
+Common
+*/
+    .maxWidth{
+        max-width: var(--max-width);
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: var(--med-marge);
+        padding-right: var(--med-marge);
+    }
+
+    .flexBox{
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+    }
+
+    .spaceBetween{
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        justify-content: space-between;
+    }
+
+    .columnDirection {
+        -moz-flex-direction: column;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+/**/
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+/*
+Components
+*/
+    /* app-home-page */
+    /* app-home-page article{
+        width: calc(50% - var(--med-marge));
+    } */
+
+    /* app-form-response */
+    app-form-response{
+        border: .1rem solid var(--med-color);
+        padding: var(--min-marge);
+        position: relative;
+    }
+
+    app-form-response.error{
+        border-color: var(--error-color);
+    }
+
+    app-form-response.success{
+        border-color: var(--success-color);
+    }
+
+    app-form-response button{
+        font-size: 2rem;
+        padding: .5rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+/**/

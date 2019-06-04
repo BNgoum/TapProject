@@ -1,0 +1,10 @@
+<header>
+  <h1>Hello {{username}} !</h1>
+  <p>You have 10 seconds to tap. Ready ? Steady ? Tap !</p>
+  <nav>
+    <ul>
+      <li><a [routerLink]="'/scores'">Scores</a></li>
+      <li><button (click)="logout()">Logout</button></li>
+    </ul>
+  </nav>
+</header>
